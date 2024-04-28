@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MassTransit" Version="8.2.2" />
+      <PackageReference Include="MassTransit.Azure.ServiceBus.Core" Version="8.2.2" />
+      <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EDA.Consumer.Demo.Application\EDA.Consumer.Demo.Application.csproj" />
+      <ProjectReference Include="..\EDA.Consumer.Demo.Domain\EDA.Consumer.Demo.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
