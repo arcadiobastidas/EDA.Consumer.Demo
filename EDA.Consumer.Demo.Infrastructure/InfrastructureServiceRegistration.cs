@@ -17,7 +17,7 @@ public static class InfrastructureServiceRegistration
     public static void AddAdditionalServices(this IServiceCollection services)
     {
         services.AddTransient<ICheckRepository, CheckRepository>();
-        services.AddScoped<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<EdaDemoDbContext>());
+        services.AddTransient<IUnitOfWork>(serviceProvider => serviceProvider.GetRequiredService<EdaDemoDbContext>());
     }
     
 }

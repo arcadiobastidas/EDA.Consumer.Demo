@@ -8,6 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="ABastidas.Eda.Demo.Messaging.Contracts" Version="1.0.2" />
         <PackageReference Include="MassTransit" Version="8.2.2" />
         <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.2" />
         <PackageReference Include="MediatR" Version="12.2.0" />

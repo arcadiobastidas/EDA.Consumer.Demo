@@ -1,5 +1,4 @@
 using System.Reflection;
-using Contracts;
 using EDA.Consumer.Demo.Application;
 using EDA.Consumer.Demo.Infrastructure;
 using MassTransit;
@@ -36,7 +35,11 @@ services.AddMassTransit(x =>
 
     x.UsingRabbitMq((context, cfg) =>
     {
-        cfg.Host("rabbitmq");
+        cfg.Host("localhost", "/", h =>
+        {
+            h.Username("guest");
+            h.Password("guest");
+        });
         cfg.UseDelayedMessageScheduler();
         cfg.UseMessageRetry(x => x.Interval(5, 1000));
         cfg.ConfigureEndpoints(context);
